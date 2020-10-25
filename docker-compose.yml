@@ -1,0 +1,51 @@
+version: '3'
+services:
+    nodejs-mailapp:
+        build:
+            context: ./node-mail-activation
+            dockerfile: Dockerfile
+        ports:
+            - "5000:5000"
+        container_name: nodejs-mailapp
+        restart: on-failure
+        volumes:
+            - ./node-mail-activation:/usr/src/app/node-mail-activation
+            - /usr/src/app/node-mail-activation/nodemodules
+        depends_on:
+            - nodejs-userapp
+    nodejs-userapp:
+        build:
+            context: ./node-mysql-registration
+            dockerfile: Dockerfile
+        ports:
+            - "4000:4000"
+        container_name: nodejs-userapp
+        restart: on-failure
+        volumes:
+            - ./node-mysql-registration:/usr/src/app/node-mysql-registration
+            - /usr/src/app/node-mysql-registration/nodemodules
+        depends_on:
+            - mysql-codegym
+    angular-codegym:
+        build:
+            context: ./CodeChallenge
+            dockerfile: Dockerfile
+        ports:
+            - "4210:4210"
+        container_name: codegym-ui
+        volumes:
+            - ./CodeChallenge:/usr/src/app/CodeChallenge
+            - /usr/src/app/CodeChallenge/nodemodules
+        depends_on:
+            - nodejs-mailapp
+            - nodejs-userapp
+    mysql-codegym:
+        container_name: mysql-codegym
+        image: mysql
+        restart: always
+        ports:
+            - "3306:3306"
+        environment:
+            MYSQL_DATABASE: gymtimedb
+            MYSQL_ROOT_PASSWORD: mysql1234
+            MYSQL_ROOT_HOST: '%'

@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://localhost:4000',
-  mailUrl: 'http://localhost:5000'
+  apiUrl: 'http://nodejs-userapp:4000',
+  mailUrl: 'http://nodejs-mailapp:5000'
 };
 
 /*

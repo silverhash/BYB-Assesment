@@ -1,6 +1,6 @@
 ﻿{
     "database": {
-        "host": "localhost",
+        "host": "mysql-codegym",
         "port": 3306,
         "user": "root",
         "password": "mysql1234",
