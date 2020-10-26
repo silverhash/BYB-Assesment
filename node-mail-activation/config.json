@@ -1,5 +1,5 @@
 ﻿{
-    "secret": "SECRET KEY TO VALIDATE THE USER ACTIVATION LINK",
+    "secret": "",
     "host": "nodejs-userapp",
-    "sgApiKey": "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"
+    "sgApiKey": ""
 }
