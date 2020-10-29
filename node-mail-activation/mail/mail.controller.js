@@ -17,7 +17,7 @@ function sendActivationEmail(req, res, next) {
     console.log('Activation link ' + link);
     const msg = {
         to: req.body.email, // Change to your recipient
-        from: 'cloudakiraa@gmail.com', // Change to your verified sender
+        from: config.from, // Change to your verified sender
         subject: 'Activation email for ' + req.body.fullName,
         text: link,
         html: "<a href='" + link + "'>Activate Email</a>",

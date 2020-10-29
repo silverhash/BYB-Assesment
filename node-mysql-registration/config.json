@@ -1,10 +1,10 @@
 ﻿{
     "database": {
-        "host": "mysql-codegym",
-        "port": 3306,
+        "host": "mysqlcodegym",
+        "port": "3306",
         "user": "root",
         "password": "mysql1234",
         "database": "gymtimedb"
     },
-    "secret": "SECRET KEY TO VALIDATE THE USER ACTIVATION LINK"
+    "secret": "TEST THE MAIL SERVICE ON DOCKER CONTAINER"
 }

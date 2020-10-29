@@ -1,5 +1,5 @@
 {
-    "name": "node-mysql-registration-login-api",
+    "name": "node-mysql-registration",
     "version": "1.0.0",
     "description": "Node.js + MySQL API for User Management, Authentication and Registration",
     "license": "MIT",

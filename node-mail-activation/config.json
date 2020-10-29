@@ -1,5 +1,6 @@
 ﻿{
-    "secret": "",
-    "host": "nodejs-userapp",
-    "sgApiKey": ""
+    "secret": "TEST THE MAIL SERVICE ON DOCKER CONTAINER",
+    "host": "192.168.99.100",
+    "sgApiKey": "",
+    "from": ""
 }
