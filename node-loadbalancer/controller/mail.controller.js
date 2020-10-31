@@ -35,9 +35,13 @@ function sendMailsfromMailgun(request) {
 
 const balancer = new LoadBalancer(sendMailsfromSendGrid, options);
 function loadBalanceEmails(req, res, next) {
-    console.log('Load balance mail service' + req.body.email + req.body.fullName);
+    const email = req.body.email
+    console.log('Load balance mail service' + email);
     balancer
         .fire(req)
-        .then(console.log)
+        .then(data => {
+            console.log(data);
+            res.json({ "message ": "Mail Sent successfully to " + email });
+        })
         .catch(console.error)
 }

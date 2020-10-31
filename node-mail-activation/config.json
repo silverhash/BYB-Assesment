@@ -2,7 +2,7 @@
     "secret": "TEST THE MAIL SERVICE ON DOCKER CONTAINER",
     "host": "192.168.99.100",
     "sgApiKey": "SG.testkey",
-    "from": "",
+    "from": "test@gmail.com",
     "mgApiKey": "testkey",
     "mgDomain": "codechallenge.com"
 }
