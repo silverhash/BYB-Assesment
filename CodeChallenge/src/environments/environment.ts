@@ -4,8 +4,8 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'http://192.168.99.100:4000',
-  mailUrl: 'http://192.168.99.100:5000'
+  apiUrl: 'http://192.168.99.100:8000',
+  mailUrl: 'http://192.168.99.100:8000'
 };
 
 /*

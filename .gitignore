@@ -9,6 +9,7 @@
 /CodeChallenge/node_modules
 /node-mail-activation/node_modules
 /node-mysql-registration/node_modules
+/node-loadbalancer/node_modules
 
 # IDEs and editors
 /.idea

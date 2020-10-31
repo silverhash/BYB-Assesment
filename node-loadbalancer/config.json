@@ -1,0 +1,4 @@
+{
+    "SG_MAIL_URI": "http://192.168.99.100:5000/mail/sendMail",
+    "MG_MAIL_URI": "http://192.168.99.100:5000/mail/sendFallbackMail"
+}

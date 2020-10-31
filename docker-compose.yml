@@ -26,6 +26,19 @@ services:
             - /usr/src/app/node-mysql-registration/node_modules
         depends_on:
             - mysqlcodegym
+    nodejsloadbalancer:
+        build:
+            context: ./node-loadbalancer
+            dockerfile: Dockerfile
+        ports:
+            - "8000:8000"
+        container_name: nodejsloadbalancer
+        restart: on-failure
+        volumes:
+            - ./node-loadbalancer:/usr/src/app/node-loadbalancer
+            - /usr/src/app/node-loadbalancer/node_modules
+        depends_on:
+            - nodejsmailapp
     angularcodegym:
         build:
             context: ./CodeChallenge
@@ -39,6 +52,7 @@ services:
         depends_on:
             - nodejsmailapp
             - nodejsuserapp
+            - nodejsloadbalancer
     mysqlcodegym:
         container_name: mysqlcodegym
         image: mysql
